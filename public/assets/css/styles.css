@@ -1,0 +1,142 @@
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-menu a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+.idance .classes-details ul.timetable {
+    margin: 0 0 10px;
+    padding: 0;
+}
+.idance .classes-details ul.timetable li {
+    list-style: none;
+    font-size: 15px;
+    color: #7f7f7f;
+}
+.idance .timetable {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.idance .timetable-item {
+    border: 1px solid #d8e3eb;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    display: block;
+}
+.idance .timetable-item-main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    margin-top: 5px;
+}
+
+.idance .timetable-item-time {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.idance .timetable-item-name {
+    font-size: 14px;
+    margin-bottom: 19px;
+    font-weight: 500;
+}
+.idance .timetable-item-date {
+   font-size: 14px;
+   margin-bottom: 19px;
+   font-weight: 500;
+}
+.idance .timetable-item-qs {
+    font-size: 14px;
+    margin-bottom: 19px;
+    font-weight: 500;
+}
+.idance .timetable-item-marks {
+    font-size: 14px;
+    margin-bottom: 19px;
+    font-weight: 500;
+}
+.idance .btn-start {
+    padding: 6px 30px;
+    margin-top: 10px;
+    width: 50%;
+    
+}
+.col-md-6
+{
+    padding: 15px;
+    margin-top: 20px;
+    position: relative;
+    display: block;
+}
+.student
+{
+    padding: 15px;
+    margin-top: 20px;
+    position: relative;
+    display: block;
+    background-color:#ceeff0;
+    
+}
+.form-inline {
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+ }
+.upcomingexam
+{
+   margin-top: 20px;
+}
+.request-container
+{
+    margin: 30px;
+}
+.middle-container
+{
+    margin: 30px;
+}
+.table-container
+{
+    margin: 30px;
+}
+.acceptbtn
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.rejectbtn
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.pass
+{
+ margin: 30px;
+}
+.table-item-old
+{
+    padding: 20px;
+}
+.table-item-new
+{
+    padding: 20px;
+}
+.table-item-confirm
+{
+    padding: 20px;
+}

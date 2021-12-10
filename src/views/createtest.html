@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/assets/css/create_test.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+        <div id="this">    
+        </div>
+        <div id="this2"></div>
+        <!--Js For dynamic Form-->
+    <script>
+        var no_of_quest = localStorage.getItem('quest');
+        //let  no_of_quest = 10;
+        //console.log(no_of_quest);
+        var cols="";
+        for(i = 1; i<=no_of_quest;i++){
+            cols += '<div class="form-group"> <div class="row"><div class="col-sm-9"><Label for="Question_num">Enter question '+i+':</Label></div><div class="col-sm-3"><input type="number" class="form-control marks"/></div></div>';
+            cols += '<div class="row"><div class="col-sm-9"><textarea type="text" class="text-area" rows="2" id="text'+i+'" placeholder="Question"></textarea></div><div class="col-sm-3"><input type="file" class="form-control" id="file'+i+'"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-A'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-B'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-C'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-D'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div></div>';
+        }
+        document.getElementById('this').innerHTML= cols;
+        function addQuestion(){
+            var cols="";
+            for(i=no_of_quest+1;;i++){    
+            cols += '<div class="form-group"> <div class="row"><div class="col-sm-9"><Label for="Question_num">Enter question '+i+':</Label></div><div class="col-sm-3"><input type="number" class="form-control marks"/></div></div>';
+            cols += '<div class="row"><div class="col-sm-9"><textarea type="text" class="text-area" rows="2" id="text'+i+'" placeholder="Question"></textarea></div><div class="col-sm-3"><input type="file" class="form-control" id="file'+i+'"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-A'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-B'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-C'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div>';
+            cols += '<div class="row"><div class="input-group col-sm-9"><div class="input-group-prepend"><div class="input-group-text"><input type="radio" name="option'+i+'" value="option-D'+i+'"></div></div><input type="text" class="form-control" placeholder="option"></div></div></div>';
+            document.getElementById('this2').innerHTML= cols;
+        }
+        }
+    </script>
+    <div class="row">
+        <div class="col-md-2">
+        <button type="button" class="btn btn-light" onclick="addQuestion();" id="button">Add Question</button> </div>
+        <div class="col-md-8"></div>
+        <div class="col">
+        <button type="submit" class="btn btn-light" id="thisbutton">Generate Test</button> </div>
+    </div>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    background-color: #189b9d;
+    scroll-behavior: smooth;
+}
+.form-content{
+    margin: auto;
+    margin-top: 50px;
+    padding-top: 30px;
+    width: 100%;
+    background-color: #fff;
+    border: 10px solid #a3e3ff;
+    border-radius: 3px;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: 2px 5px 3px rgba(0,0,0,0.4); 
+}   

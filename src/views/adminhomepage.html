@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Admin HomePage</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="images/exam.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+           <strong>EXAM ANALYTICS SYSTEM</strong>
+          </a> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="adminteachers.html">Teacher</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="adminstudent.html">Student</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="createtest.html">Test</a>
+              </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >Settings</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="adminprofilechange.html">Admin Profile</a>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>  
+      <div class="middle-container flex-container">
+        <div style="flex-grow: 1">
+          <h1>Teachers Information</h1>
+          <h2>Profiles</h2>
+          <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</a></button>
+        </form>
+      </div>
+      </div>
+     
+      <div class="request-container flex-container">
+          <div style="flex-grow: 1">
+            <h2>Requests</h2>
+          </div>
+          <div style="flex-grow: 8">
+            <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          </div>
+      </div>
+      <div class="table-container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Sr.No</th>
+              <th scope="col">Profile Photo</th>
+              <th scope="col">Name</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Accept/Decline Request</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td><img class="rounded-circle" width="40" height="40" alt="profile photo"  src="images/admin_image.png"
+                data-holder-rendered="true"></td>
+              <td>John Adam</td>
+              <td>john123@gmail.com</td>
+              <td>
+                <div class="row">
+                  <div class="column">
+                    <button class="btn btn-success acceptbtn"  type="submit">ACCEPT</button>
+                  </div>
+                  <div class="column">
+                    <button class="btn btn-danger rejectbtn" type="submit">REJECT</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+  
+</body>
+</html>
