@@ -1,0 +1,43 @@
+<div class="table-container flex-container">
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">TestName</th>
+        <th scope="col">TopicName</th>
+        <th scope="col">Description</th>
+        <th scope="col">Number of Questions</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Start Time</th>
+        <th scope="col">End Time</th>
+        <th scope="col">Start/Delete Test</th>
+      </tr>
+    </thead>
+    <tbody>
+     <%testList.forEach(test=> {%>
+          <tr>
+            <th scope="row"><%= test.testname %></th>
+            <td><%= test.topicName %></td>
+            <td><%= test.description %></td>
+            <td><%= test.numberOfQuestions %></td>
+            <td><%= test.startDate %></td>
+            <td><%= test.endDate %></td>
+            <td><%= test.startTime %></td>
+            <td><%= test.endTime %></td>
+            <td>
+                <div class="row">
+                    <div class="column">
+                      <button class="btn btn-success starttestbtn"  type="submit">Start Test</button>
+                    </div>
+                    <div class="column">
+                     <button class="btn btn-danger deletetestbtn" type="submit">Delete Test</button>
+                    </div>
+                  </div>
+            </td>
+          </tr>
+
+
+        <%}) %>
+    </tbody>
+  </table>
+  </div>

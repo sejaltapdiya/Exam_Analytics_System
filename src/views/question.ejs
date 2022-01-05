@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/create_test.css">
+</head>
+<body>
+    <% testinfo.forEach(function(item) {%>
+    <div class="container">
+        <form action="/question" method="POST">
+            <input type="hidden" class="form-control" value="<%=item.numberOfQuestions%>"  name="numberOfQuestions">
+        <div id="this">
+            <div class="form-group"> 
+                <div class="row">
+                    <input type="hidden" class="form-control" value="<%=item._id%>" name="testId">
+                </div>
+                <div class="row"><div class="col-sm-9">
+                    <Label for="Question_num">Enter question:</Label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="number" class="form-control marks" name="marks" value="1"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                <textarea type="text" name="questiontext" class="text-area" rows="2" id="text" placeholder="Question"></textarea>
+            </div>
+            </div>
+            <div class="row">
+                <div class="input-group col-sm-9">
+                    <input type="text" class="form-control" placeholder="option" name="option1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group col-sm-9">
+                    <input type="text" class="form-control" placeholder="option" name="option2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group col-sm-9">
+                    <input type="text" class="form-control" placeholder="option" name="option3">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group col-sm-9">
+                    <input type="text" class="form-control" placeholder="option" name="option4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group col-sm-9">
+                    <input type="text" class="form-control" placeholder="Correct option" id="correctoption" name="correctoption">
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <div class="row">
+        <div class="col-md-2">
+       <!--- <button type="button" class="btn btn-light" onclick="addQuestion();" id="button" >Add Question</button> </div>
+        <div class="col-md-8"></div>-->
+        <div class="col">
+        <button type="submit" class="btn btn-light" id="thisbutton">Save Question</button> </div>
+    </div>
+    </div>
+        </form>
+    </div>
+    <% }) %>
+</body>
+</html>

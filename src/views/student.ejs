@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/signup_style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="/student" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" placeholder="Enter your full name" name="name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Contact number</span>
+            <input type="text" placeholder="Enter Contact Number" name="contact"  minlength=10 maxlength=10 required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email-id" name="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Gender M/F</span>
+            <input type="text"  name="gender" placeholder="Enter your gender" required>
+      
+        </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" name="password"  aria-hidden="true" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" name="confirmpassword"  aria-hidden="true" required>
+          </div>
+        </div>
+        
+        <div class="button">
+          <input type="submit"  value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--VALIDATION-->
+  <script>
+    const email = document.getElementById('email');
+    const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+  </script>
+
+</body>
+</html>

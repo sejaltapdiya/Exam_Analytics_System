@@ -35,3 +35,7 @@ textarea{
     border-top: #999999;
     background-color: #32a852;
 }
+#correctoption{
+    outline: none;
+    border: 2px solid darkgreen;
+}

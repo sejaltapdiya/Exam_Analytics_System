@@ -1,0 +1,35 @@
+ <div class="table-container flex-container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Sr.No</th>
+              <th scope="col">Profile Photo</th>
+              <th scope="col">Name</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Accept/Decline Request</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% studentdetails.forEach(function(item) {%>
+            <tr>
+              <th scope="row"><%= item.name %></th>
+            <td><%= item.email %></td>
+            <td><%= item.contact %></td>
+            <td><%= item.gender %></td>
+            <td>
+                <div class="row">
+                  <div class="column">
+                    <button class="btn btn-success acceptbtn"  type="submit">ACCEPT</button>
+                    
+                  </div>
+                  <div class="column">
+                   <button class="btn btn-danger rejectbtn" type="submit">REJECT</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <% }) %>  
+          </tbody>
+        </table>
+      </div>   
+  

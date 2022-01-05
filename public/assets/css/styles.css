@@ -124,6 +124,20 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+.starttestbtn
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.deletetestbtn
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .pass
 {
  margin: 30px;

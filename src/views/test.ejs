@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/test_set.css">
+</head>
+<body>
+<div class="container">
+    <form class="form-content" action="/test" method="post">
+        <div class="form-row">
+            <div class="col">Test Name:
+              <input type="text" class="form-control" placeholder="Test Name" name="testname">
+            </div>
+            <div class="col">Topic Name:
+              <input type="text" class="form-control" placeholder="Topic" name="topicName">
+            </div>
+          </div>
+        <div class="form-group">
+            <label for="test instructions">Add Test Description:</label>
+            <textarea class="form-control" rows="3" name="description"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">Start Date
+                    <input type="date" id="testStartDate" class="form-control" required placeholder="Test Starts at" name=startDate>
+                </div>
+                <div class="col">End Date
+                    <input type="date" id="testEndDate" class="form-control" required placeholder="Test Ends at" name="endDate">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">Start Time
+                    <input type="time" id="testStartDate" class="form-control" required placeholder="Test Starts at" name="startTime">
+                </div>
+                <div class="col">End Time
+                    <input type="time" id="testEndDate" class="form-control" required placeholder="Test Ends at" name="endTime">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">Number of Questions:
+                    <input type="text" class="form-control" placeholder="Number of questions" id="numberOfQuestions" name="numberOfQuestions" required>
+                  <!--  <button type="submit" class="btn btn-primary" id="submit" onlcick="setAction()" >SUBMIT</button>-->
+                </div>
+            </div>
+        </div>
+       <div class="form-group">
+           <button type="submit" class="btn btn-primary" onclick="setAction();" id="submit" >SUBMIT</button>
+        </div>
+    </div>
+
+<script>
+function setAction() {
+   // var numberOfQuestions = document.getElementById('numberOfQuestions').value;
+    //localStorage.setItem('numberOfQuestions', numberOfQuestions);
+    //localStorage.setItem('bgcolor', 'red');
+    //localStorage.setItem("no_of_quest", JSON.stringify(no_of_quest));
+    //alert(`your select ${no_of_quest} Questions`);
+   var numberOfQuestions = document.getElementById('numberOfQuestions').value;
+    localStorage.setItem('numberOfQuestions',numberOfQuestions);
+   // alert("Hii");
+}
+
+</script>
+
+</body>
+</html>
